@@ -20,27 +20,19 @@ public class Palindrome {
     }
 
     public static boolean verifyWithOutString(int i) {
-        List<Integer> unitArray = new ArrayList<Integer>();
-        int arrayIndex = 0;
-
         if(i < 0) {
             return false;
         }
 
-        while(i > 0) {
-            unitArray.add(i % 10);
-            i = i / 10;
+        int reverse = 0;
+        int tempI = i;
+        while(tempI > 0) {
+            reverse = reverse * 10 + tempI% 10;
+            tempI = tempI / 10;
         }
 
-        int startIndex = 0;
-        int endIndex = unitArray.size() - 1;
-        while(startIndex < endIndex) {
-            if(unitArray.get(startIndex) != unitArray.get(endIndex)) {
-                return false;
-            } else {
-                startIndex++;
-                endIndex--;
-            }
+        if(reverse != i) {
+            return false;
         }
 
         return true;
