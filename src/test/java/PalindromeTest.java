@@ -7,37 +7,31 @@ public class PalindromeTest {
 
     @Test
     public void verifyTest() {
-        boolean result = Palindrome.verify(121);
-        assertTrue(result);
+        assertTrue(Palindrome.verify(121));
     }
 
     @Test
     public void verifyTest2() {
-        boolean result = Palindrome.verify(-121);
-        assertFalse(result);
+        assertFalse(Palindrome.verify(-121));
     }
 
     @Test
     public void verifyTest3() {
-        boolean result = Palindrome.verify(10);
-        assertFalse(result);
+        assertFalse(Palindrome.verify(10));
     }
 
     @Test
     public void verifyWithoutStringTest() {
-        boolean result = Palindrome.verifyWithOutString(121);
-        assertTrue(result);
+        assertTrue(Palindrome.verifyWithOutString(121));
     }
 
     @Test
     public void verifyWithOutStringTest2() {
-        boolean result = Palindrome.verifyWithOutString(-121);
-        assertFalse(result);
+        assertFalse(Palindrome.verifyWithOutString(-121));
     }
 
     @Test
     public void verifyWithoutStringTest3() {
-        boolean result = Palindrome.verifyWithOutString(10);
-        assertFalse(result);
+        assertFalse(Palindrome.verifyWithOutString(10));
     }
 }

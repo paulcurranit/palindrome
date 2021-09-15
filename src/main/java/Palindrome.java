@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 public class Palindrome {
     public static boolean verify(int i) {
@@ -31,10 +29,6 @@ public class Palindrome {
             tempI = tempI / 10;
         }
 
-        if(reverse != i) {
-            return false;
-        }
-
-        return true;
+        return reverse == i;
     }
 }
